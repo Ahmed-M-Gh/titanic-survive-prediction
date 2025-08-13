@@ -17,7 +17,7 @@ st.header('About the Creator 👨‍💻')
 col1, col2 = st.columns([1, 3])
 with col1:
     st.image(
-        r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\FB_IMG_1726001609431.jpg',
+        r'result/FB_IMG_1726001609431.jpg',
         width=150,
         caption='Ahmed Ghoneim'
     )
@@ -53,3 +53,4 @@ with col2:
         """,
         unsafe_allow_html=True
     )
+
