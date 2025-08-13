@@ -63,3 +63,4 @@ if con:
         st.error(f'📌 The probability of not survival is : {probability}')
         
 
+
