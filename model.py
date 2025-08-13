@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import joblib as jb
 
 #reading file
-df = pd.read_csv(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\titanic-train.csv')
+df = pd.read_csv(r'titanic-train.csv')
 
 #Deleting unimportant data
 df.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
@@ -60,9 +60,10 @@ model = KNeighborsClassifier()
 model.fit(x_train_scaled, y_train)
 
 #Saving resluts
-saving_path = r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction\\'
+saving_path = r'result'
 jb.dump(model , saving_path + 'model_train_result.sav')
 jb.dump(scale , saving_path + 'Standared_Scalar.sav')
 jb.dump(LE , saving_path + 'Label_encoding_sex.sav')
 jb.dump(OE , saving_path + 'One_Hot_encoding_embarked.sav')
+
 jb.dump(list(X.columns) , saving_path + 'column_encoded_result.sav')
