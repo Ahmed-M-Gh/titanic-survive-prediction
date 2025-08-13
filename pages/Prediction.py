@@ -4,11 +4,11 @@ import joblib as jb
 import pandas as pd
 
 #identify the models
-model = jb.load(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\results\model_train_result.sav')
-LE = jb.load(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\results\Label_encoding_sex.sav')
-OE = jb.load(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\results\One_Hot_encoding_embarked.sav')
-scalar = jb.load(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\results\Standared_Scalar.sav')
-column_after_encoding = jb.load(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\Classification Projects\1 - Titanik Survive Prediction app\results\column_encoded_result.sav')
+model = jb.load(r'result/model_train_result.sav')
+LE = jb.load(r'result/Label_encoding_sex.sav')
+OE = jb.load(r'result/One_Hot_encoding_embarked.sav')
+scalar = jb.load(r'result/Standared_Scalar.sav')
+column_after_encoding = jb.load(r'result/column_encoded_result.sav')
 
 #adding a title and subtitle
 st.set_page_config(page_title='Prediction', page_icon='🔍')
@@ -62,3 +62,4 @@ if con:
         st.success(f'📌 The probability of survival is : {probability}')
         st.error(f'📌 The probability of not survival is : {probability}')
         
+
